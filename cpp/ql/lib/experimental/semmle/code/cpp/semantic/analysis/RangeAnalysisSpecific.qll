@@ -96,11 +96,11 @@ module CppLangImpl implements LangSig<FloatDelta> {
     exists(IR::Instruction i |
       i = e and
       (
-      positively = true and
-      Simple::exprMightOverflowPositively(i.getConvertedResultExpression())
-      or
-      positively = false and
-      Simple::exprMightOverflowNegatively(i.getConvertedResultExpression())
+        positively = true and
+        Simple::exprMightOverflowPositively(i.getConvertedResultExpression())
+        or
+        positively = false and
+        Simple::exprMightOverflowNegatively(i.getConvertedResultExpression())
       )
     )
   }
